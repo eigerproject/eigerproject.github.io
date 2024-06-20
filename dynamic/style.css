@@ -1,0 +1,211 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Define color variables */
+:root {
+    --background-dark: rgb(34, 42, 44);
+    --background-light: rgb(31, 31, 34);
+    --background-lighter: rgb(44, 48, 45);
+    --text-color: white;
+    --text-danger: var(--bs-danger);
+    --light-green: #98C379;
+    --light-blue: #56B6C2;
+    --light-gray: #7F848E;
+    --light-orange: #D19A66;
+    --light-yellow: #E5C07B;
+    --light-purple: #C678DD;
+    --border-dark: #202020;
+}
+
+nav.navbar-dark
+{
+    background-color: var(--background-light);
+}
+
+::selection {
+    background: var(--background-lighter);
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+::-webkit-selection {
+    background: #3399ff;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* General styles */
+body {
+    user-select: none;
+    background-color: var(--background-dark);
+    color: var(--text-color);
+    margin-bottom: 60px;
+}
+
+.title {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+}
+
+.mono {
+    font-family: "Fira Code", monospace;
+}
+
+code {
+    font-family: "Fira Code", monospace;
+    color: var(--text-color);
+}
+
+.typewriter
+{
+    display: inline-block;
+    min-width: 200px;
+}
+
+.typewriter::after
+{
+    content: '_';
+    color:white;
+    animation: blinker 0.5s step-start infinite;
+}
+
+@keyframes blinker
+{
+    50%
+    {
+      opacity: 0;
+    }
+}
+
+/* Fade-in and fade-out containers */
+.div-fadein {
+    background: linear-gradient(180deg, var(--background-light) 0%, var(--background-dark) 100%);
+}
+
+.div-fadeout {
+    background: linear-gradient(180deg, var(--background-dark) 0%, var(--background-light) 100%);
+}
+
+/* Fullpage container */
+.fullpage {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Keyframes */
+@keyframes fadein {
+    from {
+        filter: blur(20px);
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        filter: blur(0px);
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Fade-in animation */
+div.fadeincontainer {
+    animation: fadein .9s forwards 1;
+}
+
+/* Demo code styles */
+code.demo-code {
+    display: inline-block;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    user-select: text;
+    background-color: var(--border-dark);
+    text-align: left;
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+/* Syntax highlighting */
+.hljs-string {
+    color: var(--light-green);
+}
+
+.hljs-keyword {
+    color: var(--light-blue);
+}
+
+.hljs-comment {
+    color: var(--light-gray);
+}
+
+.hljs-identifier {
+    color: var(--light-orange);
+}
+
+.hljs-function {
+    color: var(--light-yellow);
+}
+
+.hljs-operator {
+    color: var(--light-purple);
+}
+
+.hljs-number {
+    color: var(--light-green);
+}
+
+/* Error style */
+.error {
+    display: inline-block;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--text-danger);
+    color: var(--text-color);
+}
+
+
+html
+{
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: -100;
+    width: 100%;
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+.footer a
+{
+    margin: 0px 5px;
+}
+
+a
+{
+    color: var(--light-green);
+    text-decoration: none;
+}
+
+a:hover
+{
+    color:white;
+}
