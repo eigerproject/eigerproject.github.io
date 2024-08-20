@@ -72,13 +72,13 @@
             <p class="title">Comments, I/O operations and conditional statements</p>
          </div>
          <pre>                <code class="language-eiger demo-code hljs" data-highlighted="yes"><span class="hljs-comment">~ This is a comment
-</span><span class="hljs-identifier">message</span> <span class="hljs-operator">=</span> <span class="hljs-string">"Hello, World!"</span>
+</span><span class="hljs-keyword">let</span> <span class="hljs-identifier">message</span> <span class="hljs-operator">=</span> <span class="hljs-string">"Hello, World!"</span>
 <span class="hljs-function">emitln</span>(<span class="hljs-identifier">message</span>)
 
 <span class="hljs-keyword">func</span> <span class="hljs-function">ask</span>(<span class="hljs-identifier">a</span>,<span class="hljs-identifier">b</span>)
     <span class="hljs-identifier">emitln</span>(<span class="hljs-string">"What is "</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">a</span>.<span class="hljs-identifier">asString</span> <span class="hljs-operator">+</span> <span class="hljs-string">" + "</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">b</span>.<span class="hljs-identifier">asString</span> <span class="hljs-operator">+</span> <span class="hljs-string">"?"</span>)
-    <span class="hljs-identifier">sum</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">int</span>(<span class="hljs-identifier">in</span>())
-    <span class="hljs-identifier">ret</span> <span class="hljs-identifier">sum</span> <span class="hljs-operator">?=</span> (<span class="hljs-identifier">a</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">b</span>)
+    <span class="hljs-keyword">let</span> <span class="hljs-identifier">sum</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">int</span>(<span class="hljs-identifier">in</span>())
+    <span class="hljs-keyword">ret</span> <span class="hljs-identifier">sum</span> <span class="hljs-operator">?=</span> (<span class="hljs-identifier">a</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">b</span>)
 <span class="hljs-keyword">end</span>
 
 <span class="hljs-keyword">if</span> <span class="hljs-identifier">ask</span>(<span class="hljs-number">9</span>,<span class="hljs-number">10</span>) <span class="hljs-keyword">then</span>
@@ -94,6 +94,8 @@
             <p class="title">A simple OOP support (Work in progress)</p>
          </div>
          <pre>                <code class="language-eiger demo-code hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-identifier">Person</span>
+    <span class="hljs-keyword">let</span> <span class="hljs-identifier">name</span> 
+    <span class="hljs-keyword">let</span> <span class="hljs-identifier">surname</span> 
     <span class="hljs-keyword">func</span> <span class="hljs-identifier">Person</span>(<span class="hljs-identifier">name</span>, <span class="hljs-identifier">surname</span>)
         <span class="hljs-identifier">this</span>.<span class="hljs-identifier">name</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">name</span>
         <span class="hljs-identifier">this</span>.<span class="hljs-identifier">surname</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">surname</span>
@@ -108,8 +110,8 @@
     <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-identifier">px</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">Person</span>(<span class="hljs-string">"Name1"</span>, <span class="hljs-string">"Surname1"</span>)
-<span class="hljs-identifier">py</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">Person</span>(<span class="hljs-string">"Name2"</span>, <span class="hljs-string">"Surname2"</span>)
+<span class="hljs-keyword">let</span> <span class="hljs-identifier">px</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">Person</span>(<span class="hljs-string">"Name1"</span>, <span class="hljs-string">"Surname1"</span>)
+<span class="hljs-keyword">let</span> <span class="hljs-identifier">py</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">Person</span>(<span class="hljs-string">"Name2"</span>, <span class="hljs-string">"Surname2"</span>)
 
 <span class="hljs-identifier">px</span>.<span class="hljs-identifier">Introduction</span>()
 <span class="hljs-identifier">py</span>.<span class="hljs-identifier">Introduction</span>()
@@ -165,6 +167,5 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       <script src="javascript/main.js"></script>
       <script src="javascript/typewriter.js"></script>
-      <script src="javascript/eiger-highlight.js" defer=""></script>   
    </body>
 </html>
