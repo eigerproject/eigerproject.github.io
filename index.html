@@ -1,171 +1,120 @@
+<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-      <link rel="stylesheet" href="style.css">
-      <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-      <title>Eiger Programming Language</title>
-   </head>
-   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-            <img src="logo.png" alt="" width="50">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="script.js"></script>
+    <title>The Eiger Programming Language (Eigerlang)</title>
+</head>
+
+<body>
+    <section id="main"></section>
+    <header>
+        <div id="left">
+            <a href="#main">
+                <img id="logo" src="resource/logo.png" alt="Eigerlang Logo">
             </a>
-            <a class="navbar-brand" href="#">Eiger Project</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#features">Features</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#downloads">Downloads</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="https://eigerproject.github.io/docs">Documentation <i class="fa-solid fa-square-up-right"></i></a>
-                  </li>
-               </ul>
-               <div class="d-flex">
-                  <code style="color:lightgray; font-style: italic;">~ Reach new heights!</code>
-               </div>
+        </div>
+        <div id="right">
+            <ul>
+                <li>
+                    <a href="#main">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span class="text">About</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#features">
+                        <i class="fa-solid fa-gears"></i>
+                        <span class="text">Features</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/eigerproject/eigercs/releases">
+                        <i class="fa-solid fa-circle-down"></i>
+                        <span class="text">Downloads</span>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="/docs">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        <span class="text">Documentation</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="showcase-content">
+            <h1>The Eiger Programming Language</h1>
+            <p><i>(eigerlang)</i> is a general-purpose, dynamically typed programming language designed to be easy to learn, powerful, and highly expressive.</p>
+            <a target="_blank" href="/docs" class="btn"><i class="fa-solid fa-flag-checkered"></i> Get Started</a>
+            <a href="#features" class="btn"><i class="fa-solid fa-circle-question"></i> Why Eiger?</a>
+        </div>
+        <div class="showcase-code">
+            <pre><code>let readonly names = ["A", "B", "C"]
+
+for i = 0 to names.length do
+    emitln("Hello " + names[i])
+end
+
+<i>>>> Hello A
+>>> Hello B
+>>> Hello C</i>
+</code></pre>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Key Features</h2>
+        <div class="feature-list">
+            <div class="feature-item">
+                <i class="fa-solid fa-pen"></i>
+                <h3>Simple Syntax</h3>
+                <p>Eigerlang offers a clean and readable syntax, making it easy for beginners to pick up while remaining powerful for advanced use cases.</p>
             </div>
-         </div>
-      </nav>
-      <div class="fullpage div-fadein">
-         <div class="fadeincontainer">
-            <code style="color: gray;" class="mono demo-code">
-               <h1 style="transform: scale(0.8);">A <span class="hljs-identifier">general-purpose</span> programming language.<br>Designed for <span class="typewriter hljs-keyword" data-typewriter="students,developers,programmers,everyone"></span></h1>
-            </code>
-            <code class="text-center d-block" style="margin: 50px;">~ Scroll Down to Learn More</code>
-         </div>
-      </div>
-      <div id="features">
-      <div style="margin-top:30px" class="d-flex justify-content-around flex-wrap align-items-center ">
-         <div class="text-center" style="margin:20px">
-            <h1 class="title">Clean and simple syntax</h1>
-            <p class="title">Calculate the n-th member of the fibonacci sequence with this simple function</p>
-         </div>
-         <pre>                <code class="language-eiger demo-code hljs" data-highlighted="yes"><span class="hljs-comment">~ Eigerlang Demonstration
-</span><span class="hljs-comment">~ Nth member of the fibonacci sequence
-</span><span class="hljs-keyword">func</span> <span class="hljs-function">fib</span>(<span class="hljs-identifier">n</span>)
-    <span class="hljs-keyword">if</span> <span class="hljs-identifier">n</span> &lt;<span class="hljs-operator">=</span> <span class="hljs-number">1</span> <span class="hljs-keyword">then</span>
-        <span class="hljs-identifier">ret</span> <span class="hljs-number">1</span>
-    <span class="hljs-keyword">end</span>
-    <span class="hljs-identifier">ret</span> <span class="hljs-identifier">fib</span>(<span class="hljs-identifier">n</span><span class="hljs-operator">-</span><span class="hljs-number">1</span>) <span class="hljs-operator">+</span> <span class="hljs-identifier">fib</span>(<span class="hljs-identifier">n</span><span class="hljs-operator">-</span><span class="hljs-number">2</span>)
-<span class="hljs-keyword">end</span></code>
-            </pre>
-      </div>
-      <div style="margin-top:30px" class="d-flex justify-content-around flex-wrap align-items-center flex-row-reverse">
-         <div class="text-center" style="margin:20px">
-            <h1 class="title">Basic I/O, Control Flow</h1>
-            <p class="title">Comments, I/O operations and conditional statements</p>
-         </div>
-         <pre>                <code class="language-eiger demo-code hljs" data-highlighted="yes"><span class="hljs-comment">~ This is a comment
-</span><span class="hljs-keyword">let</span> <span class="hljs-identifier">message</span> <span class="hljs-operator">=</span> <span class="hljs-string">"Hello, World!"</span>
-<span class="hljs-function">emitln</span>(<span class="hljs-identifier">message</span>)
+            <div class="feature-item">
+                <i class="fa-solid fa-code-compare"></i>
+                <h3>Dynamic Typing</h3>
+                <p>No need to worry about types until runtime — allowing for fast prototyping and development.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-gauge-high"></i>
+                <h3>High Performance</h3>
+                <p>Optimized for performance while maintaining simplicity and ease of use.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-server"></i>
+                <h3>Cross-platform</h3>
+                <p>Runs seamlessly on major operating systems including Linux, Windows, and macOS.</p>
+            </div>
+        </div>
+    </section>
 
-<span class="hljs-keyword">func</span> <span class="hljs-function">ask</span>(<span class="hljs-identifier">a</span>,<span class="hljs-identifier">b</span>)
-    <span class="hljs-identifier">emitln</span>(<span class="hljs-string">"What is "</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">a</span>.<span class="hljs-identifier">asString</span> <span class="hljs-operator">+</span> <span class="hljs-string">" + "</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">b</span>.<span class="hljs-identifier">asString</span> <span class="hljs-operator">+</span> <span class="hljs-string">"?"</span>)
-    <span class="hljs-keyword">let</span> <span class="hljs-identifier">sum</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">int</span>(<span class="hljs-identifier">in</span>())
-    <span class="hljs-keyword">ret</span> <span class="hljs-identifier">sum</span> <span class="hljs-operator">?=</span> (<span class="hljs-identifier">a</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">b</span>)
-<span class="hljs-keyword">end</span>
+    <section id="community">
+        <h2>Join the Community</h2>
+        <p>Become a part of our community! Contribute to the language, explore projects, and connect with developers.</p>
+        <a href="https://github.com/eigerproject" class="btn"><i class="fa-brands fa-github"></i> Join on GitHub</a>
+    </section>
 
-<span class="hljs-keyword">if</span> <span class="hljs-identifier">ask</span>(<span class="hljs-number">9</span>,<span class="hljs-number">10</span>) <span class="hljs-keyword">then</span>
-    <span class="hljs-identifier">emitln</span>(<span class="hljs-string">"Correct!"</span>)
-<span class="hljs-keyword">else</span>
-    <span class="hljs-identifier">emitln</span>(<span class="hljs-string">"Wrong"</span>)
-<span class="hljs-keyword">end</span></code>
-            </pre>
-      </div>
-      <div style="margin-top:30px" class="d-flex justify-content-around flex-wrap align-items-center ">
-         <div class="text-center" style="margin:20px">
-            <h1 class="title">Object-oriented programming</h1>
-            <p class="title">A simple OOP support (Work in progress)</p>
-         </div>
-         <pre>                <code class="language-eiger demo-code hljs" data-highlighted="yes"><span class="hljs-keyword">class</span> <span class="hljs-identifier">Person</span>
-    <span class="hljs-keyword">let</span> <span class="hljs-identifier">name</span> 
-    <span class="hljs-keyword">let</span> <span class="hljs-identifier">surname</span> 
-    <span class="hljs-keyword">func</span> <span class="hljs-identifier">new</span>(<span class="hljs-identifier">name</span>, <span class="hljs-identifier">surname</span>)
-        <span class="hljs-identifier">this</span>.<span class="hljs-identifier">name</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">name</span>
-        <span class="hljs-identifier">this</span>.<span class="hljs-identifier">surname</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">surname</span>
-    <span class="hljs-keyword">end</span>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#main">About</a>
+                <a href="#features">Features</a>
+                <a target="_blank" href="https://github.com/eigerproject/eigercs/releases">Downloads</a>
+                <a  target="_blank" href="/docs">Documentation</a>
+            </div>
+            <div class="social-media">
+                <a href="https://github.com/eigerproject/eigerproject.github.io">Page Source</a> | <a href="https://github.com/eigerproject/">GitHub</a>
+            </div>
+            <p>&copy; 2024 Eiger Programming Language. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 
-    <span class="hljs-keyword">func</span> <span class="hljs-identifier">Introduction</span>()
-        <span class="hljs-identifier">emitln</span>(<span class="hljs-string">"I am "</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">this</span>.<span class="hljs-identifier">name</span> <span class="hljs-operator">+</span> <span class="hljs-string">" "</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">this</span>.<span class="hljs-identifier">surname</span> <span class="hljs-operator">+</span> <span class="hljs-string">"!"</span>)
-    <span class="hljs-keyword">end</span>
-
-    <span class="hljs-keyword">func</span> <span class="hljs-function">Greet</span>(<span class="hljs-identifier">other</span>)
-        <span class="hljs-identifier">emitln</span>(<span class="hljs-identifier">this</span>.<span class="hljs-identifier">name</span> <span class="hljs-operator">+</span> <span class="hljs-string">" greeted "</span> <span class="hljs-operator">+</span> <span class="hljs-identifier">other</span>.<span class="hljs-identifier">name</span> <span class="hljs-operator">+</span> <span class="hljs-string">"!"</span>)
-    <span class="hljs-keyword">end</span>
-<span class="hljs-keyword">end</span>
-
-<span class="hljs-keyword">let</span> <span class="hljs-identifier">px</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">Person</span>(<span class="hljs-string">"Name1"</span>, <span class="hljs-string">"Surname1"</span>)
-<span class="hljs-keyword">let</span> <span class="hljs-identifier">py</span> <span class="hljs-operator">=</span> <span class="hljs-identifier">Person</span>(<span class="hljs-string">"Name2"</span>, <span class="hljs-string">"Surname2"</span>)
-
-<span class="hljs-identifier">px</span>.<span class="hljs-identifier">Introduction</span>()
-<span class="hljs-identifier">py</span>.<span class="hljs-identifier">Introduction</span>()
-<span class="hljs-identifier">px</span>.<span class="hljs-function">Greet</span>(<span class="hljs-identifier">py</span>)
-
-<span class="hljs-identifier">emitln</span>(<span class="hljs-identifier">Person</span>(<span class="hljs-string">"a"</span>,<span class="hljs-string">"b"</span>).<span class="hljs-identifier">Introduction</span>())</code>
-            </pre>
-      </div>
-      </div>
-      <div id="downloads" class="text-center">
-         <h1 class="title">
-            Stable Releases
-         </h1>
-         <div class="d-flex align-items-center justify-content-center">
-            <table class="table table-dark" style="width: 50%; margin: 20px">
-               <thead>
-                  <tr>
-                     <th scope="col">Version</th>
-                     <th scope="col">Date</th>
-                     <th scope="col">Release Notes</th>
-                     <th scope="col">Downloads</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <th scope="row">0.1</th>
-                     <td>In Progress</td>
-                     <td><i>Not Available</i></td>
-                     <td>
-                        <i style="color: var(--bs-danger); margin: 5px;" class="fa-brands fa-windows"></i>
-                        <i style="color: var(--bs-danger); margin: 5px;" class="fa-brands fa-apple"></i>
-                        <i style="color: var(--bs-danger); margin: 5px;" class="fa-brands fa-linux"></i>
-                     </td>
-                  </tr>
-                  <tr>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-      </div>
-      <footer class="footer text-center">
-         <a class="navbar-brand" href="#">
-            <img src="logo.png" alt="" width="50">
-         </a>
-         <div>
-            <a target="_blank" href="https://github.com/eigerproject/eigerlang"> Repository</a>
-            |
-            <a target="_blank" href="https://github.com/eigerproject/eigerproject.github.io">Page Source</a>
-            |
-            <a target="_blank" href="https://eigerproject.github.io/docs">Documentation</a>
-         </div>
-      </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <script src="javascript/main.js"></script>
-      <script src="javascript/typewriter.js"></script>
-   </body>
 </html>
