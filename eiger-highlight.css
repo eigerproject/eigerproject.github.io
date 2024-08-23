@@ -1,0 +1,31 @@
+.hljs-keyword {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.hljs-string {
+    color: #d14;
+}
+
+.hljs-number {
+    color: #c92c2c;
+}
+
+.hljs-comment {
+    color: #999;
+    font-style: italic;
+}
+
+.hljs-function {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.hljs-identifier {
+    color: #2a7bde;
+}
+
+.hljs-operator {
+    color: #333;
+    font-weight: bold;
+}

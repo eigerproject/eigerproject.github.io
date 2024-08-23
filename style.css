@@ -5,7 +5,7 @@
 }
 
 :root {
-    --bg: rgb(14, 16, 13);
+    --bg: rgb(6, 7, 6);
     --bg2: rgb(13, 15, 12);
     --fg: rgb(209, 209, 209);
     --accent: rgb(113, 172, 113);
@@ -24,6 +24,10 @@ body {
     background-color: var(--bg);
     color: var(--fg);
     line-height: 1.6;
+}
+
+header.ontop {
+    opacity: 0.7;
 }
 
 header {
@@ -55,10 +59,6 @@ header a {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-pre {
-    text-align: right;
 }
 
 header a:hover {
@@ -134,12 +134,25 @@ header a:hover {
     border-radius: 8px;
     margin: 20px;
     max-width: 300px;
+    transition: 0.3s ease;
 }
 
 .feature-item i {
     display: inline-block;
     font-size: 50px;
     margin-bottom: 30px;
+    opacity: 0.3;
+    transition: 0.3s ease;
+
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    cursor: default;
+}
+
+.feature-item:hover i {
+    transform: scale(1.1);
     opacity: 0.6;
 }
 
@@ -184,12 +197,13 @@ footer p {
     header span.text {
         display: none;
     }
+    header {
+        display: flex;
+    }
 }
 
-@media (max-width: 900px) {
-    pre {
-        text-align: left;
-    }
+pre {
+    text-align: left;
 }
 
 ::selection {
@@ -199,4 +213,26 @@ footer p {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeincontainer {
+    opacity: 0;
+    animation: fadein 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.d1 {
+    animation-delay: 0.3s;
+}
+
+.d2 {
+    animation-delay: 0.6s;
 }

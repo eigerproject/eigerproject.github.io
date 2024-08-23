@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="eiger-highlight.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script defer src="script.js"></script>
+    <script defer src="javascript/script.js"></script>
+    <script defer src="javascript/eiger-highlight.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
     <title>The Eiger Programming Language (Eigerlang)</title>
 </head>
 
@@ -49,22 +54,22 @@
     </header>
 
     <section id="showcase">
-        <div class="showcase-content">
+        <div class="showcase-content fadeincontainer">
             <h1>The Eiger Programming Language</h1>
             <p><i>(eigerlang)</i> is a general-purpose, dynamically typed programming language designed to be easy to learn, powerful, and highly expressive.</p>
             <a target="_blank" href="/docs" class="btn"><i class="fa-solid fa-flag-checkered"></i> Get Started</a>
             <a href="#features" class="btn"><i class="fa-solid fa-circle-question"></i> Why Eiger?</a>
         </div>
-        <div class="showcase-code">
-            <pre><code>let readonly names = ["A", "B", "C"]
+        <div class="showcase-code fadeincontainer d1">
+            <pre><code class="language-eiger">let readonly names = ["A", "B", "C"]
 
 for i = 0 to names.length do
     emitln("Hello " + names[i])
 end
 
-<i>>>> Hello A
->>> Hello B
->>> Hello C</i>
+~ Hello A
+~ Hello B
+~ Hello C
 </code></pre>
         </div>
     </section>
