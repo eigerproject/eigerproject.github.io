@@ -5,10 +5,11 @@
 }
 
 :root {
-    --bg: rgb(6, 7, 6);
-    --bg2: rgb(13, 15, 12);
+    --bg: rgb(10, 12, 10);
+    --bg2: rgb(19, 22, 17);
     --fg: rgb(209, 209, 209);
     --accent: rgb(113, 172, 113);
+    --accentdark: rgb(38, 53, 38);
 }
 
 html {
@@ -72,7 +73,8 @@ header a:hover {
     align-items: center;
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    background: linear-gradient(45deg, #000000, var(--accentdark));
+    background: -webkit-linear-gradient(45deg, #000000, var(--accentdark));
 }
 
 .showcase-content {
@@ -129,7 +131,7 @@ header a:hover {
 }
 
 .feature-item {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--bg2);
     padding: 30px;
     border-radius: 8px;
     margin: 20px;
