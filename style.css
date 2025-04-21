@@ -35,7 +35,7 @@ header {
     background-color: var(--bg2);
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: sticky;
     left: 0;
@@ -75,6 +75,7 @@ header a:hover {
     padding: 60px 20px;
     background: linear-gradient(45deg, #000000, var(--accentdark));
     background: -webkit-linear-gradient(45deg, #000000, var(--accentdark));
+    min-height: 70vh;
 }
 
 .showcase-content {
