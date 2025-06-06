@@ -61,16 +61,28 @@
             <a target="_blank" href="https://github.com/eigerproject/eigercs" ><i class="fa-brands fa-github"></i> Contribute on GitHub</a>
         </div>
         <div class="showcase-code fadeincontainer d1">
-            <pre><code class="language-eiger">func isActive(user) > user.status == "active"
+            <pre><code class="language-eiger">class User {
+    let email
+    let status
+
+    func new(email, status) {
+        this.email = email
+        this.status = status
+    }
+}
 
 func getActiveUserEmails(users) {
-    activeUsers = filter(users, isActive)
-    emails = map(activeUsers, func(user) > user.email)
+    func isActive(user) > user.status ?= "active"
+
+    let readonly activeUsers = filter(users, isActive)
+    let readonly emails = map(activeUsers, func(user) > user.email)
 
     ret emails
 }
 
 let readonly emails = getActiveUserEmails(fetchUsers())
+
+for i = 0 to emails.length emitln(fmt("Active User #%1 => %2", i + 1, emails[i]))
 </code></pre>
         </div>
     </section>

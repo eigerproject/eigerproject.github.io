@@ -105,6 +105,24 @@ header a:hover {
     font-size: 1rem;
 }
 
+@media screen and (max-width: 800px) {
+    .showcase-code pre {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .showcase-code pre {
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .showcase-code pre {
+        font-size: 7px;
+    }
+}
+
 .btn {
     display: inline-block;
     padding: 10px 20px;
