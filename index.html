@@ -55,20 +55,22 @@
 
     <section id="showcase">
         <div class="showcase-content fadeincontainer">
-            <h1>The Eiger Programming Language</h1>
+            <h1 class="head-title-text">The Eiger Programming Language</h1>
             <p><i>(eigerlang)</i> is a general-purpose, dynamically typed programming language designed to be easy to learn, powerful, and highly expressive.</p>
             <a target="_blank" href="/docs" class="btn"><i class="fa-solid fa-flag-checkered"></i> Get Started</a>
-            <a href="#features" class="btn"><i class="fa-solid fa-circle-question"></i> Why Eiger?</a>
+            <a target="_blank" href="https://github.com/eigerproject/eigercs" ><i class="fa-brands fa-github"></i> Contribute on GitHub</a>
         </div>
         <div class="showcase-code fadeincontainer d1">
-            <pre><code class="language-eiger">let readonly names = ["A", "B", "C"]
+            <pre><code class="language-eiger">func isActive(user) > user.status == "active"
 
-for i = 0 to names.length
-    emitln("Hello " + names[i])
+func getActiveUserEmails(users) {
+    activeUsers = filter(users, isActive)
+    emails = map(activeUsers, func(user) > user.email)
 
-~ Hello A
-~ Hello B
-~ Hello C
+    ret emails
+}
+
+let readonly emails = getActiveUserEmails(fetchUsers())
 </code></pre>
         </div>
     </section>
@@ -84,7 +86,7 @@ for i = 0 to names.length
             <div class="feature-item">
                 <i class="fa-solid fa-code-compare"></i>
                 <h3>Dynamic Typing</h3>
-                <p>No need to worry about types until runtime — allowing for fast prototyping and development.</p>
+                <p>No need to worry about types until runtime - allowing for fast prototyping and development.</p>
             </div>
             <div class="feature-item">
                 <i class="fa-solid fa-terminal"></i>
@@ -95,11 +97,6 @@ for i = 0 to names.length
                 <i class="fa-solid fa-cubes"></i>
                 <h3>Object-Oriented Programming</h3>
                 <p>Eigerlang supports object-oriented principles, allowing for modular and reusable code structures.</p>
-            </div>
-            <div class="feature-item">
-                <i class="fa-solid fa-gauge-high"></i>
-                <h3>High Performance</h3>
-                <p>Optimized for performance while maintaining simplicity and ease of use.</p>
             </div>
             <div class="feature-item">
                 <i class="fa-solid fa-server"></i>

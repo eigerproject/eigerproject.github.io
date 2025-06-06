@@ -3,7 +3,7 @@ hljs.registerLanguage('eiger', function(hljs) {
       contains: [
         {
           className: 'keyword',
-          begin: '\\b(include|for|class|func|end|dataclass|if|while|then|to|do|else|let|readonly|private)\\b'
+          begin: '\\b(include|for|class|func|end|dataclass|if|while|then|to|do|else|let|readonly|private|ret)\\b'
         },
         {
           className: 'string',

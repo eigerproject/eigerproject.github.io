@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Noto Sans", sans-serif;
     background-color: var(--bg);
     color: var(--fg);
     line-height: 1.6;
@@ -53,6 +55,10 @@ header ul {
 
 header li {
     margin: 0;
+}
+
+a {
+    color: inherit;
 }
 
 header a {
@@ -229,13 +235,17 @@ pre {
 
 .fadeincontainer {
     opacity: 0;
-    animation: fadein 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    animation: fadein 3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 .d1 {
-    animation-delay: 0.3s;
+    animation-delay: 1s;
 }
 
 .d2 {
-    animation-delay: 0.6s;
+    animation-delay: 2s;
+}
+
+h1.head-title-text {
+    font-weight: 900;
 }
